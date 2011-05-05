@@ -1,0 +1,23 @@
+<h1 class="center">Listing Teams</h1>
+
+<table class="round center">
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teams.each do |team| %>
+  <tr>
+    <td><nobr><%= h team.name %></nobr></td>
+    <td><%= link_to 'Show', team %></td>
+    <td><%= link_to 'Manage', edit_team_path(team) %></td>
+    <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Home', root_path %> | <%= link_to 'New Team', new_team_path %>

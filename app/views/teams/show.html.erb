@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<p>Name : <strong><%= @team.name %></strong></p>
+<p>
+Roster:
+
+<% if @team.players.empty? %>
+   <i>No players assigned to this team.</i>
+<% else %>
+  <ol>
+  <% @team.players.each do |player| %>
+  <li> <%= player.name %></li>
+  <% end %>
+  </ol>
+<% end %>
+</p>
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

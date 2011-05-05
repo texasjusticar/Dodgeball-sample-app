@@ -1,0 +1,72 @@
+body {
+	background: #ffffcc;
+}
+.players {
+  background: #33ffff;
+}
+.teams {
+	background: #cc99ff;
+}
+.games {
+	background: #9999cc;
+}
+form, table, ul, ol {
+  background: #ffffff;
+  margin: 0 20px 20px;
+  border-spacing: 0px;
+}
+form, tr, td, ul {
+  padding: 15px;
+  border-spacing: 0px;
+}
+h1 {
+	text-align: center;
+}
+.center {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.right {
+  width: 25%;
+  margin-left: 70%;
+
+}
+.left {
+  width: 25%;
+  float: left;
+}
+.half {
+	width: 50%;
+	text-align: center;
+}
+ul {
+	list-style: none;
+}
+div {
+  background: #ffffff;
+  display:block;
+  margin:20px;
+  padding:.5em;
+  zoom: 1;
+}
+li {
+	font-size: 18px;
+	padding: 5px;
+}
+img {
+	vertical-align: middle;
+}
+ol {
+	font-size: 18px;
+	left-padding: 20px;
+}
+
+form, ul, ol, .round {
+  -webkit-box-shadow:0 0 15px #ffa500; 
+  -moz-box-shadow: 0 0 15px #ffa500; 
+  box-shadow:0 0 15px #ffa500;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}

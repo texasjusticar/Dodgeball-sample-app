@@ -1,0 +1,2 @@
+$('<li id="<%= @player.id %>"><%= h @player.name %> <%= link_to image_tag("trash.png"), remove_player_team_path(@team, :player_id => @player.id), :remote => true %></li>').appendTo('ul#roster');
+$("option[value='<%= @player.id %>']").remove();

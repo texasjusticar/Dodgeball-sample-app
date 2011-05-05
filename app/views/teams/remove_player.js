@@ -1,0 +1,1 @@
+$('li#<%= @affiliation.player.id %>').remove();

@@ -1,0 +1,14 @@
+development:
+  adapter: mysql
+  database: dodgeball_dev
+  username: web
+  password: webapp
+
+test:
+  adapter: mysql
+  database: dodgeball_test
+  username: web
+  password: webapp
+
+production:
+  :development

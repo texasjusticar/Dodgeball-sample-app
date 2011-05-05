@@ -1,0 +1,27 @@
+<h1>Editing team</h1>
+
+<%= render 'form' %>
+
+<p><strong>Manage Roster for <%= @team.name %></strong></p>
+
+<% unless @team.available_players.empty? %>
+  <%= form_for(@team, :url => add_player_team_path,:html => { :method => :post }, :remote => true) do |f| %>
+  
+  <%= select_tag "new_player_id", available_options_for_team(@team) %> 
+  <%= f.submit "Add player" %>
+
+  <% end %>
+<% end %>
+
+<ul id="roster">
+<% unless @team.players.empty? %>
+  <% @team.players.each do |player| %>
+    <li id='<%= player.id %>'>
+      <%= h player.name %> 
+      <%= link_to image_tag("trash.png"), remove_player_team_path(@team, :player_id => player.id), :remote => true %>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+<%= link_to 'Show', @team %> |
+<%= link_to 'Back', teams_path %>
